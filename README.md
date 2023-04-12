@@ -2,13 +2,13 @@ Check In:
 -we're feeling excited for this, a bit nervous to tackle the tech
 
 Wellbeing:
--breaks (knowing you can take those when you think you need them)
--being open and honest with each other, any time your feeling stressed, etc.
--giving eachother space when we need it.
--taking the small wins as a chance for a break, so we can actually celebrate and savour these.
--having huddles (seperate from standups) to check in on eachother aswell as shoulder taps if we think anyone is struggling.
--be flexible, we all know the plan will change and doingretros daily will let us adapt to thr challanges we face daily
--watch if anyone seems too quiet or is being short with others, could indicate stress. We've said we should check in on eachother and give eachother space if requested.
+- breaks (knowing you can take those when you think you need them)
+- being open and honest with each other, any time your feeling stressed, etc.
+- giving eachother space when we need it.
+- taking the small wins as a chance for a break, so we can actually celebrate and savour these.
+- having huddles (seperate from standups) to check in on eachother aswell as shoulder taps if we think anyone is struggling.
+- be flexible, we all know the plan will change and doingretros daily will let us adapt to thr challanges we face daily
+- watch if anyone seems too quiet or is being short with others, could indicate stress. We've said we should check in on eachother and give eachother space if requested.
 
 Stress profiles:
 Reuben : Tends to stay quiet and struggle alone and getting tunnel vision on the problem without asking for help. A quick shoulder tap should bring me back into play with the group and i can then explain what's going on.
