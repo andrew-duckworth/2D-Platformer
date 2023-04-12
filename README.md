@@ -1,13 +1,14 @@
 Check In:
 -we're feeling excited for this, a bit nervous to tackle the tech
 
-Wellbeing:
+Wellbeing / Stress profiles:
 -breaks (knowing you can take those when you think you need them)
 -being open and honest with each other, any time your feeling stressed, etc.
 -giving eachother space when we need it.
 -taking the small wins as a chance for a break, so we can actually celebrate and savour these.
 -having huddles (seperate from standups) to check in on eachother aswell as shoulder taps if we think anyone is struggling.
 -be flexible, we all know the plan will change and doingretros daily will let us adapt to thr challanges we face daily
+-watch if anyone seems too quiet or is being short with others, could indicate stress. We've said we should check in on eachother and give eachother space if requested.
 
 Expectation setting and agreements:
 -we're going to work 9-5, if you want to work outside this time keep it to your own part of the project and communicate with the team what you're doing.
@@ -33,4 +34,3 @@ Survival:
 -team building outside of dev in the form of games.
 -entertainment (drinks, etc)
 
-![image](https://user-images.githubusercontent.com/121936474/231586259-ee9d8f45-c9d3-4c3c-bd39-c5143399d78d.png)
