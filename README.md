@@ -33,3 +33,4 @@ Survival:
 -team building outside of dev in the form of games.
 -entertainment (drinks, etc)
 
+![image](https://user-images.githubusercontent.com/121936474/231586259-ee9d8f45-c9d3-4c3c-bd39-c5143399d78d.png)
