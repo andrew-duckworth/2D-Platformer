@@ -1,7 +1,11 @@
-Check In:
-- we're feeling excited for this, a bit nervous to tackle the tech
 
 # Wellbeing:
+
+## Check In:
+- we're feeling excited for this, a bit nervous to tackle the tech but we think with good teamwork we can acheive a product we are proud of!
+
+---
+
 - breaks (knowing you can take those when you think you need them)
 - being open and honest with each other, any time your feeling stressed, etc.
 - giving eachother space when we need it.
@@ -46,6 +50,8 @@ Check In:
 - inviting everyone to lunch, but still leaving it open for the to decline.
 - team building outside of dev in the form of games.
 - entertainment (drinks, etc)
+
+---
 
 # Roles and agile:
 - we have assigned the 4 main roles plus a teamlead to crack the whip if we start slacking or get off track.
