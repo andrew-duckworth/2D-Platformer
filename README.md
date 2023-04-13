@@ -1,4 +1,4 @@
-- our [tech](/documentation/Tech.md)
+- Our [tech](/documentation/Tech.md) documentation
 
 # Wellbeing:
 
