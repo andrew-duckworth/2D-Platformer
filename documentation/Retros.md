@@ -1,4 +1,4 @@
-# Reflections 
+# End of day Reflections 
 
 ## Wednesday 13/04
 ---
@@ -12,7 +12,7 @@
 
 ### Cons
 
-- Samll tech issues due to lack of knowledge with the tech
+- Small tech issues due to lack of knowledge with the tech
 
 ---
 
