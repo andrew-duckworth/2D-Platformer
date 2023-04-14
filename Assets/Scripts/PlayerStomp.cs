@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerStomp : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-      if(collision.gameObject.tag == "Weak Point")
+      if(other.CompareTag("Weak Point"))
       {
-        Destroy(collision.gameObject);
+        Destroy(other.transform.parent.gameObject);
       }
     }
 
