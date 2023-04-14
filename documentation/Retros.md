@@ -33,3 +33,25 @@ As a team we just really keen to get stuck into it once the research is done. We
 
 ### Initial Thoughts:
 We are really happy with the progress we made yesterday and are ready to implement the tech we learnt today. The group is in high spirits and everyone is happy with the roles we have decided. 
+
+### Weekend work (15/04 - 16/04)
+
+- Jordan: Working on pause menu, and UI
+- Andrew: Animation scripts, events etc.. 
+- Isaac: Nothing yet will ask boys before going ahead with anything
+- Reuben: Build a working stage for testing, look at moving backgrounds
+
+## End of day reflections
+
+### Pros
+- Big win with sorting deployment
+- Individual resarch went really well
+- Vibes were decent throughout the day
+- Good amount of work towards MVP again
+- Voicing of concerns were heard and placated to 
+
+### Cons
+- More frustration surrounding chosen tech, concerns where voice and dealt with
+- use of KANBAN was spotty at best, got better towards end of day
+
+---
