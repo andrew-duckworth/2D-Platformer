@@ -8,7 +8,7 @@
 As a team we just really keen to get stuck into it once the research is done. We are going to be researching at a relatively simular pace to try and speed up the process. Evveryone is just excited to get amongst it a churn out an awesome product, We all have our own research targets and will update the rest of group as tech comes into play. 
 
 
-## End of Day reflections:
+## End of day reflections:
 
 ### Pros
 
