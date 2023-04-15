@@ -2441,9 +2441,13 @@ MonoBehaviour:
   input: 0
   spriteRenderer: {fileID: 1761096723}
   jumpForce: 18
+  playerSize: 5
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  platform:
+    serializedVersion: 2
+    m_Bits: 0
   feetPosition: {fileID: 1679748654}
   groundCheckCircle: 0.3
   jumpTime: 0.15
@@ -2469,7 +2473,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 8
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -2585,6 +2589,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929bde51cbf727d7e897a794c90cc9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platform:
+    serializedVersion: 2
+    m_Bits: 0
+  feetPosition: {fileID: 0}
+  groundCheckCircle: 0
 --- !u!114 &1761096728
 MonoBehaviour:
   m_ObjectHideFlags: 0
