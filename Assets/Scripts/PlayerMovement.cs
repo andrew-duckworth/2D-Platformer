@@ -29,6 +29,14 @@ public class PlayerMovement : MonoBehaviour
   //check if jump has already been initiated to prevent double jump
   private bool isJumping;
 
+//set knockback force
+  public float KBForce;
+  //watches how long the knockback effect has been played
+  public float KBCounter;
+  public float KBTotalTime;
+//direction of knockback
+  public bool KnockFromRight;
+
 
     // Update is called once per frame
     void Update()
@@ -78,7 +86,27 @@ public class PlayerMovement : MonoBehaviour
 
   void FixedUpdate()
   {
-    playerRb.velocity = new Vector2 (input * speed, playerRb.velocity.y);
+    if(KBCounter <= 0)
+    {
+      playerRb.velocity = new Vector2 (input * speed, playerRb.velocity.y);
+    }
+    else
+    {
+      if(KnockFromRight == true)
+      {
+        //Sets player to move left and up (-)
+        playerRb.velocity = new Vector2(-KBForce, KBForce);
+      }
+      if(KnockFromRight == false)
+      {
+        //sets player to move right and up (+)
+        playerRb.velocity = new Vector2(KBForce, KBForce);
+      }
+
+      KBCounter -= Time.deltaTime;
+
+    }
+    
   }
 
  
