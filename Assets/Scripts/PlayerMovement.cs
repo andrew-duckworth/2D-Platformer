@@ -33,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
   public float jumpTime = 0.35f;
   public float jumpTimeCounter;
 
+  //jumps
+  public int maxJumps;
+  public int jumpCounter;
+
   //check if jump has already been initiated to prevent double jump
   private bool isJumping;
 
@@ -65,10 +69,14 @@ public class PlayerMovement : MonoBehaviour
       //Check if grounded
       isGrounded = Physics2D.OverlapCircle(feetPosition.position, groundCheckCircle, groundLayer);
       
-      
+      if(isGrounded)
+      {
+        jumpCounter = (maxJumps - 1);
+      }
 
       if(isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
       {
+        
         isJumping = true;
         jumpTimeCounter = jumpTime;
         playerRb.velocity = Vector2.up * jumpForce;
@@ -94,8 +102,14 @@ public class PlayerMovement : MonoBehaviour
       }
 
 
+
     //check if platformed
       isPlatformed = Physics2D.OverlapCircle(feetPosition.position, groundCheckCircle, platform);
+
+        if(isPlatformed)
+      {
+        jumpCounter = (maxJumps - 1);
+      }
 
     if(isPlatformed == true && Input.GetKeyDown(KeyCode.UpArrow))
       {
@@ -123,6 +137,16 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
       }
 
+
+      if(jumpCounter > 0 && Input.GetKeyDown(KeyCode.UpArrow))
+      {
+
+          jumpCounter -= 1;
+          isJumping = true;
+          jumpTimeCounter = jumpTime;
+          playerRb.velocity = Vector2.up * jumpForce;
+        
+      }
 
 
     }
