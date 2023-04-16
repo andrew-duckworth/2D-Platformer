@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class PlatformDrop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+  public LayerMask platform;
+  private bool isPlatformed;
+
+  //feet pos check
+  public Transform feetPosition;
+  public float groundCheckCircle;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.DownArrow))
+
+       //check if platformed
+      isPlatformed = Physics2D.OverlapCircle(feetPosition.position, groundCheckCircle, platform);
+
+        if(isPlatformed == true && Input.GetKeyDown(KeyCode.DownArrow))
         {
           StartCoroutine(FallTimer());
         }
