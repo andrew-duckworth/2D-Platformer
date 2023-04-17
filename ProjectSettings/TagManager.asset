@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Weak Point
+  - Destroy
+  - Weak
+  - Double Jump Trigger
+  - Flamingo Trigger
   layers:
   - Default
   - TransparentFX
@@ -11,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Platform
   - 
   - 
   - 
