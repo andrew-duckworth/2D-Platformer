@@ -72,5 +72,5 @@ We are really happy with the progress we made yesterday and are ready to impleme
 - little bit of messing around today without direction or added features without updating kanban
 - few technical issues but mostly due to lack of knowlegde with tech
 
-### thoughts
+### Thoughts
 - we are worried that meging all our files might be a big mission so we gonna tackle that in the morning. We will also add new things to the kanbam to keep us on track in the next two days so we not aimlessly working on things. 
