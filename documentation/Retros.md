@@ -41,7 +41,7 @@ We are really happy with the progress we made yesterday and are ready to impleme
 - Isaac: Nothing yet will ask boys before going ahead with anything
 - Reuben: Build a working stage for testing, look at moving backgrounds
 
-## End of day reflections
+## End of day reflections:
 
 ### Pros
 - Big win with sorting deployment
@@ -60,6 +60,8 @@ We are really happy with the progress we made yesterday and are ready to impleme
 
 ---
 
+## End of day reflections: 
+ 
 ### Pros
 - Met personal goals, andrew stoked with getting animations going, reub with his backgrounds etc..
 - communication was on point
