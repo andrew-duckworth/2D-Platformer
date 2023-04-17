@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
+    public Sprite oldSprite;
+
     public int maxHealth = 10;
     public int health;
 
@@ -26,6 +30,8 @@ public class PlayerHealth : MonoBehaviour
 //takes damage value from enemy script and adds to player health
   public void TakeDamage(int damage)
   {
+
+    // StartCoroutine(ChangeSprite());
     // livesManager.LoseLife();
     health -= damage;
     if(health <= 0)
@@ -34,5 +40,15 @@ public class PlayerHealth : MonoBehaviour
       playerMovement.enabled = false;
     }
   }
+
+
+  // IEnumerator ChangeSprite()
+  // {
+  //   playerMovement.playerSize = 0.15f;
+  //   spriteRenderer.sprite = newSprite;
+  //   yield return new WaitForSeconds(1);
+  //   spriteRenderer.sprite = oldSprite;
+  //   playerMovement.playerSize = 5f;
+  // }
 
 }

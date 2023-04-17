@@ -9,6 +9,7 @@ public GameOver gameOver;
 public PlayerMovement playerMovement;
     public SpriteRenderer playerSr;
     public Vector3 respawnPoint;
+    public FlamingoBehaviour flamingoBehaviour;
 
   public PlayerHealth playerHealth;
 
@@ -19,7 +20,11 @@ public PlayerMovement playerMovement;
       transform.position = respawnPoint; 
       playerSr.enabled = true;
       playerMovement.enabled = true;
+      playerMovement.jumpTrigger = false;
+   
       Time.timeScale = 1;
+      flamingoBehaviour.deathByFlamingo = false;
+      
     }
 
 }
