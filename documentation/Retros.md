@@ -55,3 +55,20 @@ We are really happy with the progress we made yesterday and are ready to impleme
 - use of KANBAN was spotty at best, got better towards end of day
 
 ---
+
+## Monday 17/04
+
+---
+
+### Pros
+- Met personal goals, andrew stoked with getting animations going, reub with his backgrounds etc..
+- communication was on point
+- wireframe was good and useful
+- made good decisions on product and all happy with it
+
+### Cons
+- little bit of messing around today without direction or added features without updating kanban
+- few technical issues but mostly due to lack of knowlegde with tech
+
+### thoughts
+- we are worried that meging all our files might be a big mission so we gonna tackle that in the morning. We will also add new things to the kanbam to keep us on track in the next two days so we not aimlessly working on things. 
