@@ -47,7 +47,7 @@ public class MonsterMovementChase : MonoBehaviour
           //execute when enemy gets close to point 0
           if(Vector2.Distance(transform.position, patrolPoints[0].position) < .2f)
           {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
             patrolDestination = 1;
           }
         }
@@ -59,7 +59,7 @@ public class MonsterMovementChase : MonoBehaviour
           //execute when enemy gets close to point 1
           if(Vector2.Distance(transform.position, patrolPoints[1].position) < .2f)
           {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
             patrolDestination = 0;
           }
         }
