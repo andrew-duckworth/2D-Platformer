@@ -8,6 +8,8 @@ TagManager:
   - Weak Point
   - Destroy
   - Weak
+  - Double Jump Trigger
+  - Flamingo Trigger
   layers:
   - Default
   - TransparentFX

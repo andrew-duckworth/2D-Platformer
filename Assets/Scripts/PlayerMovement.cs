@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 { 
+  public bool jumpTrigger;
+
   public Rigidbody2D playerRb;
   public float speed;
 
@@ -125,10 +127,6 @@ public class PlayerMovement : MonoBehaviour
           playerRb.velocity = Vector2.up * jumpForce;
           jumpTimeCounter -= Time.deltaTime;
         }
-        else
-        {
-          isJumping = false;
-        }
 
       }
 
@@ -138,9 +136,9 @@ public class PlayerMovement : MonoBehaviour
       }
 
 
-      if(jumpCounter > 0 && Input.GetKeyDown(KeyCode.UpArrow))
+      if(jumpTrigger && jumpCounter > 0 && Input.GetKeyDown(KeyCode.UpArrow))
       {
-
+        
           jumpCounter -= 1;
           isJumping = true;
           jumpTimeCounter = jumpTime;
