@@ -36,8 +36,10 @@ public class PlayerHealth : MonoBehaviour
     health -= damage;
     if (health <= 0)
     {
+      //movement enabled false
+      //sr enabled false
       playerSr.enabled = true;
-      playerMovement.enabled = false;
+      playerMovement.enabled = true;
     }
   }
 

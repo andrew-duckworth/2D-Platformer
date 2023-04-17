@@ -21,7 +21,7 @@ public PlayerMovement playerMovement;
       playerSr.enabled = true;
       playerMovement.enabled = true;
       playerMovement.jumpTrigger = false;
-   
+      gameOver.displayGameOver = false;
       Time.timeScale = 1;
       flamingoBehaviour.deathByFlamingo = false;
       

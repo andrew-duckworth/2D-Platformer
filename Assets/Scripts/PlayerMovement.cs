@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
 { 
   public bool jumpTrigger;
 
-
+  public GameOver gameOver;
+  public bool Die;
 
   public PlayerHealth playerHealth;
   public Animator animator;
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
   public int jumpCounter;
 
   //check if jump has already been initiated to prevent double jump
-  private bool isJumping;
+  public bool isJumping;
 
   //set knockback force
   public float KBForce;
@@ -59,10 +60,17 @@ public class PlayerMovement : MonoBehaviour
   void Update()
   {
 
-    if (playerHealth.health <= 0)
+    if(playerHealth.health <= 0 && gameOver.displayGameOver == false)
     {
+      StartCoroutine(PlayerDies());
+      gameOver.displayGameOver = true;
+    }
+    
+    
       //sets -1 or 1 depending on key press
        input = Input.GetAxisRaw("Horizontal");
+
+       animator.SetFloat("Speed", Mathf.Abs(input));
        //flips image direction based on this value
         if(input < 0)
         {
@@ -82,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
       {
         jumpCounter = (maxJumps - 1);
       }
+      
 
       if(isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
       {
@@ -119,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
       {
         jumpCounter = (maxJumps - 1);
       }
+      
 
     if(isPlatformed == true && Input.GetKeyDown(KeyCode.UpArrow))
       {
@@ -150,105 +160,26 @@ public class PlayerMovement : MonoBehaviour
           isJumping = true;
           jumpTimeCounter = jumpTime;
           playerRb.velocity = Vector2.up * jumpForce;
-        
       }
 
-      animator.SetTrigger("ReadDead");
+      if(isJumping)
+      {
+        animator.SetBool("JumpAn", true);
+      }
+      
+      if(isJumping == false)
+      {
+        animator.SetBool("JumpAn", false);
+      }
 
-    }
-    // else
-    // {
-    //   animator.SetTrigger("ReadDead", false);
-    // }
-    //sets -1 or 1 depending on key press
-    input = Input.GetAxisRaw("Horizontal");
-
-    animator.SetFloat("Speed", Mathf.Abs(input));
-
-    //flips image direction based on this value
-    if (input < 0)
+    if(isJumping == false && input == 0 && playerHealth.health > 0)
     {
-      transform.localScale = new Vector3(-playerSize, playerSize, 1);
-      // spriteRenderer.flipX = true;
-    }
-    else if (input > 0)
-    {
-      transform.localScale = new Vector3(playerSize, playerSize, 1);
-      // spriteRenderer.flipX = false;
-    }
-
-    //Check if grounded
-    isGrounded = Physics2D.OverlapCircle(feetPosition.position, groundCheckCircle, groundLayer);
-
-
-    if (isJumping)
-    {
-      animator.SetBool("JumpAn", true);
+      animator.SetBool("PlayerIdle", true);
     }
     else
     {
-      animator.SetBool("JumpAn", false);
+      animator.SetBool("PlayerIdle", false);
     }
-
-
-    if (isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
-    {
-      isJumping = true;
-      jumpTimeCounter = jumpTime;
-      playerRb.velocity = Vector2.up * jumpForce;
-
-    }
-
-    if (Input.GetKey(KeyCode.UpArrow) && isJumping == true)
-    {
-      if (jumpTimeCounter > 0)
-      {
-        playerRb.velocity = Vector2.up * jumpForce;
-        jumpTimeCounter -= Time.deltaTime;
-      }
-      else
-      {
-        isJumping = false;
-      }
-
-    }
-
-    if (Input.GetKeyUp(KeyCode.UpArrow))
-    {
-      isJumping = false;
-    }
-
-
-    //check if platformed
-    isPlatformed = Physics2D.OverlapCircle(feetPosition.position, groundCheckCircle, platform);
-
-    if (isPlatformed == true && Input.GetKeyDown(KeyCode.UpArrow))
-    {
-      isJumping = true;
-      jumpTimeCounter = jumpTime;
-      playerRb.velocity = Vector2.up * jumpForce;
-    }
-
-    if (Input.GetKey(KeyCode.UpArrow) && isJumping == true)
-    {
-      if (jumpTimeCounter > 0)
-      {
-        playerRb.velocity = Vector2.up * jumpForce;
-        jumpTimeCounter -= Time.deltaTime;
-      }
-      else
-      {
-        isJumping = false;
-      }
-
-    }
-
-    if (Input.GetKeyUp(KeyCode.UpArrow))
-    {
-      isJumping = false;
-    }
-
-
 
   }
 
@@ -276,6 +207,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
   }
-
+IEnumerator PlayerDies()
+  {
+    animator.SetBool("IsDead", true);
+    yield return new WaitForSeconds (0.45f);
+    animator.SetBool("IsDead", false);
+  }
 
 }

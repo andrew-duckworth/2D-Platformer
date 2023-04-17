@@ -6,7 +6,7 @@ public class GameOver : MonoBehaviour
 {
   //starts false
   // private bool isGameOver;
-
+  public bool displayGameOver;
   //grabs pausePanel
   public GameObject gameOverPanel;
 
@@ -18,7 +18,7 @@ public class GameOver : MonoBehaviour
   void Update()
   {
     //if player health is less than 0 gameover is true
-    if (playerHealth.health <= 0)
+    if(playerHealth.health <= 0)
     {
       SetGameOver();
     }
@@ -28,7 +28,8 @@ public class GameOver : MonoBehaviour
 
   public void SetGameOver()
   {
-    Time.timeScale = 0;
+    // Time.timeScale = 0;
+    //turn off render and movement
     gameOverPanel.SetActive(true);
   }
 
