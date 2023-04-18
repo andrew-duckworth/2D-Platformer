@@ -20,10 +20,14 @@ public PlayerMovement playerMovement;
       transform.position = respawnPoint; 
       playerSr.enabled = true;
       playerMovement.enabled = true;
+      playerMovement.playerRb.bodyType = RigidbodyType2D.Dynamic;
+      playerMovement.Die = false;
+      playerMovement.speed = playerMovement.maxSpeed;
+      // playerMovement.speed = playerMovement.maxSpeed;
       playerMovement.jumpTrigger = false;
       gameOver.displayGameOver = false;
       Time.timeScale = 1;
-      flamingoBehaviour.deathByFlamingo = false;
+      // flamingoBehaviour.deathByFlamingo = false;
       
     }
 

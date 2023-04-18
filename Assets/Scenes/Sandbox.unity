@@ -392,6 +392,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &331567701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331567703}
+  - component: {fileID: 331567702}
+  m_Layer: 0
+  m_Name: HeartFaded
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &331567702
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331567701}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: af665d6c0e3ae69ce998fc3822e5377c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.11, y: 0.09}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &331567703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331567701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.1341314, y: 2.4925, z: -0.12385}
+  m_LocalScale: {x: 53.607994, y: 53.607994, z: 53.607994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &400631889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,6 +2369,7 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   animator: {fileID: 0}
   playerRb: {fileID: 1226819625}
+  maxSpeed: 0
   speed: 5
   input: 0
   spriteRenderer: {fileID: 1226819626}
@@ -2540,6 +2625,7 @@ MonoBehaviour:
   displayGameOver: 0
   gameOverPanel: {fileID: 2055593385}
   playerHealth: {fileID: 1761096725}
+  playerMovement: {fileID: 0}
 --- !u!95 &1295412279
 Animator:
   serializedVersion: 5
@@ -3504,6 +3590,7 @@ MonoBehaviour:
   playerHealth: {fileID: 1761096725}
   animator: {fileID: 1761096731}
   playerRb: {fileID: 1761096722}
+  maxSpeed: 5
   speed: 5
   input: 0
   spriteRenderer: {fileID: 1761096723}
@@ -3629,7 +3716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1761096723}
   newSprite: {fileID: 21300000, guid: 4e1711e66161cc84f82e3ca124faed36, type: 3}
-  oldSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  oldSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 3}
   maxHealth: 5
   health: 0
   playerSr: {fileID: 1761096723}
@@ -3681,7 +3768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   maxHealth: 5
-  emptyHeart: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  emptyHeart: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   fullHeart: {fileID: 21300000, guid: 15cc575b0d9a36846838578bfb080819, type: 3}
   hearts:
   - {fileID: 579107731}
@@ -3764,6 +3851,7 @@ MonoBehaviour:
   displayGameOver: 0
   gameOverPanel: {fileID: 2055593385}
   playerHealth: {fileID: 1761096725}
+  playerMovement: {fileID: 1761096720}
 --- !u!1 &1776031969
 GameObject:
   m_ObjectHideFlags: 0

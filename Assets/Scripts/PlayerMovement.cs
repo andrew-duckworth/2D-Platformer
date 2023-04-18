@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
   public PlayerHealth playerHealth;
   public Animator animator;
   public Rigidbody2D playerRb;
+  public float maxSpeed;
   public float speed;
 
   //tracks x (left or right)
@@ -68,7 +69,15 @@ public class PlayerMovement : MonoBehaviour
     
     
       //sets -1 or 1 depending on key press
-       input = Input.GetAxisRaw("Horizontal");
+       if(Die)
+       {
+          input = 0f;
+       }
+       else
+       {
+          input = Input.GetAxisRaw("Horizontal");
+       }
+        
 
        animator.SetFloat("Speed", Mathf.Abs(input));
        //flips image direction based on this value
@@ -210,6 +219,9 @@ public class PlayerMovement : MonoBehaviour
 IEnumerator PlayerDies()
   {
     animator.SetBool("IsDead", true);
+    playerRb.bodyType = RigidbodyType2D.Static;
+    animator.SetBool("PlayerIsDead", true);
+    Die = true;
     yield return new WaitForSeconds (0.45f);
     animator.SetBool("IsDead", false);
   }

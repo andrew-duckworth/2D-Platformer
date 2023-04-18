@@ -13,6 +13,8 @@ public class GameOver : MonoBehaviour
   //link to playerhealth
   public PlayerHealth playerHealth;
 
+  public PlayerMovement playerMovement;
+
 
   // Update is called once per frame
   void Update()
@@ -30,6 +32,8 @@ public class GameOver : MonoBehaviour
   {
     // Time.timeScale = 0;
     //turn off render and movement
+    // playerMovement.enabled = false;
+    // playerMovement.speed = 0f;
     gameOverPanel.SetActive(true);
   }
 
