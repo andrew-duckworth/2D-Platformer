@@ -1270,6 +1270,7 @@ GameObject:
   - component: {fileID: 1116552886}
   - component: {fileID: 1116552893}
   - component: {fileID: 1116552892}
+  - component: {fileID: 1116552894}
   m_Layer: 0
   m_Name: MovingEnemy(Destructable) (0)
   m_TagString: Untagged
@@ -1326,7 +1327,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.25}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1352,7 +1353,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.25}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1402,8 +1403,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.786839, a: 1}
+  m_Sprite: {fileID: 1051028572, guid: 31c6df27d336f401e8856cd5ebcd7bc6, type: 3}
+  m_Color: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1421,7 +1422,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116552885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: -1.17, y: -3.71, z: -0.022749867}
+=======
   m_LocalPosition: {x: 10.400001, y: 6.62, z: -0.022749867}
+>>>>>>> 94d7e99a043228b3dbac8bba32ad9c35e5b1faa1
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1469,13 +1474,30 @@ MonoBehaviour:
   patrolDestination: 0
   playerTransform: {fileID: 1761096724}
   isChasing: 0
+<<<<<<< HEAD
+  chaseDistance: 2
+--- !u!111 &1116552894
+Animation:
+=======
   chaseDistance: 3
 --- !u!1 &1286445215
 GameObject:
+>>>>>>> 94d7e99a043228b3dbac8bba32ad9c35e5b1faa1
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1116552885}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+=======
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1286445216}
@@ -1682,6 +1704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 2055593385}
   playerHealth: {fileID: 1761096725}
+>>>>>>> 94d7e99a043228b3dbac8bba32ad9c35e5b1faa1
 --- !u!1 &1298754467
 GameObject:
   m_ObjectHideFlags: 0

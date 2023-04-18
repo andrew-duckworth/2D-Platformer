@@ -6,7 +6,13 @@ public class PlayerMovement : MonoBehaviour
 { 
   public bool jumpTrigger;
 
+  public GameOver gameOver;
+  public bool Die;
+
+  public PlayerHealth playerHealth;
+  public Animator animator;
   public Rigidbody2D playerRb;
+  public float maxSpeed;
   public float speed;
 
   //tracks x (left or right)
@@ -19,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
   //player size
   public float playerSize = 5f;
 
-//ground layer check
+  //ground layer check
   public LayerMask groundLayer;
   private bool isGrounded;
 
@@ -40,22 +46,40 @@ public class PlayerMovement : MonoBehaviour
   public int jumpCounter;
 
   //check if jump has already been initiated to prevent double jump
-  private bool isJumping;
+  public bool isJumping;
 
-//set knockback force
+  //set knockback force
   public float KBForce;
   //watches how long the knockback effect has been played
   public float KBCounter;
   public float KBTotalTime;
-//direction of knockback
+  //direction of knockback
   public bool KnockFromRight;
 
 
-    // Update is called once per frame
-    void Update()
+  // Update is called once per frame
+  void Update()
+  {
+
+    if(playerHealth.health <= 0 && gameOver.displayGameOver == false)
     {
+      StartCoroutine(PlayerDies());
+      gameOver.displayGameOver = true;
+    }
+    
+    
       //sets -1 or 1 depending on key press
-       input = Input.GetAxisRaw("Horizontal");
+       if(Die)
+       {
+          input = 0f;
+       }
+       else
+       {
+          input = Input.GetAxisRaw("Horizontal");
+       }
+        
+
+       animator.SetFloat("Speed", Mathf.Abs(input));
        //flips image direction based on this value
         if(input < 0)
         {
@@ -75,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
       {
         jumpCounter = (maxJumps - 1);
       }
+      
 
       if(isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
       {
@@ -112,6 +137,7 @@ public class PlayerMovement : MonoBehaviour
       {
         jumpCounter = (maxJumps - 1);
       }
+      
 
     if(isPlatformed == true && Input.GetKeyDown(KeyCode.UpArrow))
       {
@@ -143,26 +169,43 @@ public class PlayerMovement : MonoBehaviour
           isJumping = true;
           jumpTimeCounter = jumpTime;
           playerRb.velocity = Vector2.up * jumpForce;
-        
       }
 
+      if(isJumping)
+      {
+        animator.SetBool("JumpAn", true);
+      }
+      
+      if(isJumping == false)
+      {
+        animator.SetBool("JumpAn", false);
+      }
 
-    }
-
-  void FixedUpdate()
-  {
-    if(KBCounter <= 0)
+    if(isJumping == false && input == 0 && playerHealth.health > 0)
     {
-      playerRb.velocity = new Vector2 (input * speed, playerRb.velocity.y);
+      animator.SetBool("PlayerIdle", true);
     }
     else
     {
-      if(KnockFromRight == true)
+      animator.SetBool("PlayerIdle", false);
+    }
+
+  }
+
+  void FixedUpdate()
+  {
+    if (KBCounter <= 0)
+    {
+      playerRb.velocity = new Vector2(input * speed, playerRb.velocity.y);
+    }
+    else
+    {
+      if (KnockFromRight == true)
       {
         //Sets player to move left and up (-)
         playerRb.velocity = new Vector2(-KBForce, KBForce);
       }
-      if(KnockFromRight == false)
+      if (KnockFromRight == false)
       {
         //sets player to move right and up (+)
         playerRb.velocity = new Vector2(KBForce, KBForce);
@@ -171,8 +214,16 @@ public class PlayerMovement : MonoBehaviour
       KBCounter -= Time.deltaTime;
 
     }
-    
+
+  }
+IEnumerator PlayerDies()
+  {
+    animator.SetBool("IsDead", true);
+    playerRb.bodyType = RigidbodyType2D.Static;
+    animator.SetBool("PlayerIsDead", true);
+    Die = true;
+    yield return new WaitForSeconds (0.45f);
+    animator.SetBool("IsDead", false);
   }
 
- 
 }
