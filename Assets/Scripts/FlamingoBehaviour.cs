@@ -8,6 +8,9 @@ public class FlamingoBehaviour : MonoBehaviour
   public bool deathByFlamingo;
   public GameObject Flamingo;
 
+  public float x;
+  public float y;
+
     void Start()
     {
       flamingoRb.gravityScale = 0;
@@ -22,7 +25,7 @@ public class FlamingoBehaviour : MonoBehaviour
         }
         else
         {
-          Flamingo.transform.position = new Vector2(5, 21);
+          Flamingo.transform.position = new Vector2(y, x);
           flamingoRb.gravityScale = 0;
         }
         

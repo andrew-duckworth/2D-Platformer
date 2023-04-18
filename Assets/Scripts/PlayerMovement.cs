@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
   public float KBTotalTime;
   //direction of knockback
   public bool KnockFromRight;
+  public AudioSource jumpAudio;
 
 
   // Update is called once per frame
@@ -103,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
       if(isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
       {
-        
+        jumpAudio.Play();
         isJumping = true;
         jumpTimeCounter = jumpTime;
         playerRb.velocity = Vector2.up * jumpForce;
@@ -141,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
 
     if(isPlatformed == true && Input.GetKeyDown(KeyCode.UpArrow))
       {
+        jumpAudio.Play();
         isJumping = true;
         jumpTimeCounter = jumpTime;
         playerRb.velocity = Vector2.up * jumpForce;
@@ -164,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
 
       if(jumpTrigger && jumpCounter > 0 && Input.GetKeyDown(KeyCode.UpArrow))
       {
-        
+          jumpAudio.Play();
           jumpCounter -= 1;
           isJumping = true;
           jumpTimeCounter = jumpTime;

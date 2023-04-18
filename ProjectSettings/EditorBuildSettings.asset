@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sandbox.unity
     guid: 5b1313475ece76572b2c1c538656ddcb
+  - enabled: 1
+    path: Assets/Scenes/ReubsStuff.unity
+    guid: 73e4547c62f294ef5b5538637119f322
   m_configObjects: {}
