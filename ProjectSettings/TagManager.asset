@@ -10,6 +10,7 @@ TagManager:
   - Weak
   - Double Jump Trigger
   - Flamingo Trigger
+  - Platform
   layers:
   - Default
   - TransparentFX
